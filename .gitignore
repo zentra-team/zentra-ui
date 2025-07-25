@@ -1,6 +1,7 @@
 **/node_modules/
 **/dist
 **/cache/
+**/.DS_Store
 
 packages/core/dist
 packages/docs/app/.vitepress/cache
