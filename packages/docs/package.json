@@ -1,0 +1,35 @@
+{
+  "name": "@bounceui/docs",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vitepress dev app",
+    "build": "vitepress build app",
+    "preview": "vitepress preview app"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --ext .ts --no-error-on-unmatched-pattern --fix"
+    ]
+  },
+  "devDependencies": {
+    "@shikijs/twoslash": "^3.8.1",
+    "@shikijs/vitepress-twoslash": "^3.4.2",
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/node": "^20.11.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "clsx": "^2.1.1",
+    "comment-parser": "^1.4.1",
+    "lucide-vue-next": "^0.511.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rollup": "^4.45.1",
+    "shiki": "^3.4.2",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.7",
+    "vitepress": "^1.6.3",
+    "vue": "^3.4.0"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "@bounceui/core",
+  "version": "0.0.1",
+  "description": "Best UI components for React",
+  "private": true,
+  "author": {
+    "name": "Zatrata",
+    "url": "https://github.com"
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && vite build",
+    "build:js": "tsc --project tsconfig.build.json && prettier --write src/bundle",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "eslint . --ext ts --ext tsx --no-error-on-unmatched-pattern --fix",
+    "css": "shx rm -rf src/styles/output.css && npx @tailwindcss/cli -i ./src/styles/globals.css -o ./src/styles/output.css",
+    "test": "vitest"
+  },
+  "sideEffects": false,
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "import": "./dist/esm/index.mjs",
+    "require": "./dist/cjs/index.cjs"
+  },
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-select": "^2.2.4",
+    "@radix-ui/react-slot": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.510.0",
+    "tailwind-merge": "^3.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "comment-parser": "^1.4.1",
+    "core-js": "^3.37.1",
+    "jsdom": "^26.1.0",
+    "rollup": "^4.45.1",
+    "shx": "^0.3.4",
+    "tailwindcss": "^4.1.7",
+    "tw-animate-css": "^1.2.9",
+    "typescript": "5.5.3",
+    "typescript-eslint": "^7.15.0",
+    "vite": "^7.0.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vitepress": "^1.2.3",
+    "vitest": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --ext .ts --no-error-on-unmatched-pattern --fix",
+      "jest"
+    ]
+  }
+}

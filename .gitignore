@@ -1,0 +1,7 @@
+**/node_modules/
+**/dist
+**/cache/
+
+packages/core/dist
+packages/docs/app/.vitepress/cache
+packages/docs/app/.vitepress/dist

@@ -1,0 +1,30 @@
+{
+  "name": "@bounceui/root",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "eslint . --ext ts --ext tsx --no-error-on-unmatched-pattern --fix",
+    "dev": "yarn workspace @bounceui/core css && yarn workspace @bounceui/core build && yarn workspace @bounceui/docs build && yarn workspace @bounceui/docs dev",
+    "core:build": "yarn workspace @bounceui/core build",
+    "core:test": "yarn workspace @bounceui/core test",
+    "core:css": "yarn workspace @bounceui/core css",
+    "docs:dev": "yarn workspace @bounceui/core dev",
+    "docs:build": "yarn workspace @bounceui/core build",
+    "docs:preview": "yarn workspace @bounceui/core preview"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/docs"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.11.0",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "shx": "^0.3.4",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2"
+  }
+}

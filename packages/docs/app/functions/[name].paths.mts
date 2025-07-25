@@ -1,0 +1,86 @@
+import { codeToHtml } from "shiki"
+import {
+  checkAvailableTest,
+  getContent,
+  getContentFile,
+  matchJsdoc,
+  parseHookJsdoc
+} from "../../src/utils"
+
+export default {
+  async paths() {
+    const hooks = await getContent("functions")
+
+    const params = await Promise.all(
+      hooks.map(async (hook) => {
+        const { content, stats } = await getContentFile("functions", hook.name)
+        const jsdocMatch = matchJsdoc(content)
+
+        if (!jsdocMatch) {
+          console.error(`No jsdoc comment found for ${hook}`)
+          return null
+        }
+
+        const jsdoc = parseHookJsdoc(jsdocMatch)
+
+        if (!jsdoc.description || !jsdoc.usages) {
+          console.error(`No content found for ${hook}`)
+          return null
+        }
+
+        const usages = jsdoc.usages.reduce((acc, usage, index) => {
+          if (index !== jsdoc.usages.length - 1) {
+            acc += `${usage.description}\n// or\n`
+          } else {
+            acc += usage.description
+          }
+          return acc
+        }, "")
+
+        const usage = await codeToHtml(usages, {
+          lang: "typescript",
+          themes: {
+            light: "github-light",
+            dark: "github-dark"
+          },
+          defaultColor: false
+        })
+
+        const example = await codeToHtml(`import { ${hook.name} } from '@bounceui';`, {
+          lang: "typescript",
+          themes: {
+            light: "github-light",
+            dark: "github-dark"
+          },
+          defaultColor: false
+        })
+
+        const isTest = await checkAvailableTest(hook)
+
+        return {
+          params: {
+            id: hook.name,
+            name: hook.name,
+            description: jsdoc.description.description,
+            category: jsdoc.category?.name,
+            lastModified: stats.mtime.getTime(),
+            isTest,
+            usage,
+            example,
+            apiParameters: jsdoc.apiParameters
+          }
+        }
+      })
+    )
+
+    // const features = params
+    //   .filter(Boolean)
+    //   .map((param) => {
+    //     return `\n- title: ${param?.params.name}\n  details: ${param?.params.description}\n  link: /functions/hooks/${param?.params.name}`;
+    //   })
+    //   .join(' ');
+    // console.log('@', features);
+
+    return params.filter(Boolean)
+  }
+}
