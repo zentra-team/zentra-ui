@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://reactuse.dev">
+  <a href="https://zentra-team.github.io/zentra-ui">
     <picture>
       <img alt="React Use logo" src="https://zentra-team.github.io/zentra-ui/black-logo.svg" height="128">
     </picture>
