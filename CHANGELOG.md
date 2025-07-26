@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/getracky/bounce-ui/compare/v0.0.2...v0.0.3) (2025-07-26)
+
+
+### 🐛 Bug Fixes
+
+* fixed README.md ([bb0f719](https://github.com/getracky/bounce-ui/commit/bb0f719dea8d6f8feb13dec734941afea830deb6))
+
+
+### 🔧 Maintenance
+
+* update github workflows ([38b120f](https://github.com/getracky/bounce-ui/commit/38b120f034564aa8f1cf233b8c20e454d9dcc9fe))
+
 ### 0.0.2 (2025-07-26)
 
 
