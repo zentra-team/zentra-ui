@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://zentra-team.github.io/zentra-ui">
     <picture>
-      <img alt="React Use logo" src="https://zentra-team.github.io/zentra-ui/black-logo.svg" height="128">
+      <img style="background-color: black; padding: 20px;" alt="React Use logo" src="https://zentra-team.github.io/zentra-ui/logo.svg" height="128">
     </picture>
   </a>
   <h1>Zentra UI</h1>
