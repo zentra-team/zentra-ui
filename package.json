@@ -13,7 +13,12 @@
     "core:css": "yarn workspace @bounceui/core css",
     "docs:dev": "yarn workspace @bounceui/docs dev",
     "docs:build": "yarn workspace @bounceui/docs build",
-    "docs:preview": "yarn workspace @bounceui/docs preview"
+    "docs:preview": "yarn workspace @bounceui/docs preview",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "release:alpha": "standard-version --prerelease alpha",
+    "release:beta": "standard-version --prerelease beta"
   },
   "workspaces": [
     "packages/core",
