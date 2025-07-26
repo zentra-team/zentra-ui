@@ -1,6 +1,7 @@
 {
   "name": "@bounceui/root",
   "private": true,
+  "version": "0.0.2",
   "author": {
     "name": "zentra"
   },
