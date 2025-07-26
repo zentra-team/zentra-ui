@@ -37,13 +37,13 @@ export default async () => {
       languages: ["js", "jsx", "ts", "tsx"]
     } as unknown as MarkdownOptions,
     vite: {
-      css: {
-        preprocessorOptions: {
-          css: {
-            additionalData: '@import "./theme/global.css";'
-          }
-        }
-      },
+      // css: {
+      //   preprocessorOptions: {
+      //     css: {
+      //       additionalData: '@import "./theme/global.css";'
+      //     }
+      //   }
+      // },
       plugins: [tailwindcss() as any],
       resolve: {
         alias: {
@@ -127,14 +127,14 @@ export default async () => {
       // }
     },
     themeConfig: {
-      search: {
-        provider: "algolia",
-        options: {
-          appId: "62LROXAB1F",
-          apiKey: "c1ff07348583383446ca32068eb1300f",
-          indexName: "siberiacancodeio"
-        }
-      },
+      // search: {
+      //   provider: "algolia",
+      //   options: {
+      //     appId: "62LROXAB1F",
+      //     apiKey: "c1ff07348583383446ca32068eb1300f",
+      //     indexName: "siberiacancodeio"
+      //   }
+      // },
       socialLinks: [
         { icon: "github", link: "https://github.com/siberiacancode/reactuse" },
         { icon: "npm", link: "https://www.npmjs.com/package/@siberiacancode/reactuse" },
