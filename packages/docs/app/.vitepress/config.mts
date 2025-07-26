@@ -28,9 +28,9 @@ export default async () => {
   }))
 
   return defineConfig({
-    base: "/",
+    base: "/zentra-ui/",
     appearance: true,
-    title: "Bounce UI",
+    title: "Zentra UI",
     description: "🚀 the largest and most useful hook library",
     markdown: {
       codeTransformers: [transformerTwoslash()],
