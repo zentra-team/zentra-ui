@@ -4,13 +4,13 @@
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint . --ext ts --ext tsx --no-error-on-unmatched-pattern --fix",
-    "dev": "yarn workspace @bounceui/core css && yarn workspace @bounceui/core build && yarn workspace @bounceui/docs build && yarn workspace @bounceui/docs dev",
+    "dev": "yarn workspace @bounceui/core build && yarn workspace @bounceui/docs build && yarn workspace @bounceui/docs dev",
     "core:build": "yarn workspace @bounceui/core build",
     "core:test": "yarn workspace @bounceui/core test",
     "core:css": "yarn workspace @bounceui/core css",
-    "docs:dev": "yarn workspace @bounceui/core dev",
-    "docs:build": "yarn workspace @bounceui/core build",
-    "docs:preview": "yarn workspace @bounceui/core preview"
+    "docs:dev": "yarn workspace @bounceui/docs dev",
+    "docs:build": "yarn workspace @bounceui/docs build",
+    "docs:preview": "yarn workspace @bounceui/docs preview"
   },
   "workspaces": [
     "packages/core",
