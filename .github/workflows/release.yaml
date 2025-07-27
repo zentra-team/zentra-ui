@@ -12,12 +12,31 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate changelog and tag version
+        run: |
+          npm run release -- --skip.commit --skip.tag
+
+      - name: Extract latest changelog section
+        id: changelog
+        run: |
+          awk '/^###? \[?[0-9]+\.[0-9]+\.[0-9]+/{i++} i==1' CHANGELOG.md > body.md
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          cat body.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          generate_release_notes: true
+          body: ${{ steps.changelog.outputs.body }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
