@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/getracky/bounce-ui/compare/v0.0.4...v0.0.6) (2025-07-27)
+
+
+### 🐛 Bug Fixes
+
+* change release.yaml ([e652ff2](https://github.com/getracky/bounce-ui/commit/e652ff2df1812551a4b0b8cd2a177c04810a68b8))
+* change release.yaml ([41bcb39](https://github.com/getracky/bounce-ui/commit/41bcb39f620f9b38d8e0ee68d042d625a5055cbe))
+* fixed workflows ([fdc2e44](https://github.com/getracky/bounce-ui/commit/fdc2e44020e46ab43e563b1829d8634a53a246a6))
+* update readme ([5e99377](https://github.com/getracky/bounce-ui/commit/5e99377dc522b765775154ffa6c85f32de0c2c3b))
+* update readme v2 ([e707f7f](https://github.com/getracky/bounce-ui/commit/e707f7f0bfc9de41357c3dce5d817f0dd6b945e7))
+* update readme v3 ([bd04c17](https://github.com/getracky/bounce-ui/commit/bd04c17dd7befe1a4724f2abc7a46f461fbf54d1))
+
+
+### 🔧 Maintenance
+
+* **release:** 0.0.5 ([eb652d4](https://github.com/getracky/bounce-ui/commit/eb652d48ce8c715e2141e8f29abdc2551affab55))
+
 ### [0.0.5](https://github.com/getracky/bounce-ui/compare/v0.0.4...v0.0.5) (2025-07-27)
 
 
