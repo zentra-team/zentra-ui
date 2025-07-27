@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://zentra-team.github.io/zentra-ui">
-    <img alt="Zentra logo" src="https://zentra-team.github.io/zentra-ui/logo.svg" height="128" width="128" />
+    <img alt="Zentra logo" src="https://zentra-team.github.io/zentra-ui/logo.svg" height="128" width="128" style="background-color: black; padding: 20px;" />
   </a>
   <h1>Zentra UI</h1>
 </div>
