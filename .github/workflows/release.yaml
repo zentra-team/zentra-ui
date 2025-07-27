@@ -20,11 +20,11 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: Generate changelog and tag version
         run: |
-          npm run release -- --skip.commit --skip.tag
+          yarn run release -- --skip.commit --skip.tag
 
       - name: Extract latest changelog section
         id: changelog
